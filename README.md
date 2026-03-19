@@ -40,13 +40,13 @@ Add the dependency to your build file.
 <dependency>
     <groupId>io.github.kinsleykajiva</groupId>
     <artifactId>ecocash</artifactId>
-    <version>0.1.2</version>
+    <version>0.1.3</version>
 </dependency>
 ```
 
 **Gradle**
 ```groovy
-implementation 'io.github.kinsleykajiva:ecocash:0.1.2'
+implementation 'io.github.kinsleykajiva:ecocash:0.1.3'
 ```
 
 ### Building from Source
