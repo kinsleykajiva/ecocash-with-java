@@ -16,7 +16,7 @@ package ecocash.api;
  * }
  * }</pre>
  *
- * <h3>Known status values</h3>
+ * <strong>Known status values</strong>
  * <ul>
  *   <li>{@code SUCCESS} – payment was completed successfully.</li>
  *   <li>{@code PENDING_VALIDATION} – the user has not yet approved the prompt.</li>

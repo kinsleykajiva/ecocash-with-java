@@ -3,6 +3,8 @@
 A type-safe, fluent Java client for the [Ecocash Open API](https://developers.ecocash.co.zw).
 Supports payment initiation, transaction status polling, and refunds against both sandbox and live environments.
 
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.kinsleykajiva/ecocash.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.github.kinsleykajiva%22%20AND%20a:%22ecocash%22)
+
 > Requires **Java 17+** and `org.json:json:20240303`.
 
 ---
@@ -35,13 +37,13 @@ Add the dependency to your build file.
 <dependency>
     <groupId>io.github.kinsleykajiva</groupId>
     <artifactId>ecocash</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
 </dependency>
 ```
 
 **Gradle**
 ```groovy
-implementation 'io.github.kinsleykajiva:ecocash:0.1.0'
+implementation 'io.github.kinsleykajiva:ecocash:0.1.1'
 ```
 
 ### Building from Source
