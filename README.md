@@ -3,7 +3,7 @@
 A type-safe, fluent Java client for the [Ecocash Open API](https://developers.ecocash.co.zw).
 Supports payment initiation, transaction status polling, and refunds against both sandbox and live environments.
 
-> Requires **Java 11+** and `org.json:json:20240303`.
+> Requires **Java 17+** and `org.json:json:20240303`.
 
 ---
 
@@ -64,7 +64,7 @@ try (EcocashClient client = EcocashClient.builder()
 
     // 1. Initiate a payment — sends a prompt to the customer's handset
     InitPaymentResponse payment =
-            client.initPayment("26377854266", 20.05, "bread");
+            client.initPayment("26377800000", 20.05, "bread");
 
     // 2. Poll until SUCCESS or timeout
     LookupTransactionResponse result = client.pollTransaction(payment);
@@ -116,7 +116,7 @@ try (EcocashClient client = EcocashClient.builder()
 
 ```java
 InitPaymentResponse payment = client.initPayment(
-        "26377854266",  // customer MSISDN
+        "26377858888",  // customer MSISDN
         20.05,          // amount (USD)
         "bread"         // reason shown on customer's handset
 );
@@ -202,7 +202,7 @@ Use `lookupTransaction` when you manage the retry loop yourself — for example 
 LookupTransactionResponse tx =
         client.lookupTransaction(
                 "325a802f-943e-47c2-addf-010285f09cea",  // sourceReference
-                "26377854266"                             // customer phone
+                "26377000000"                             // customer phone
         );
 
 // Use the STATUS_* constants to avoid hardcoded strings
@@ -227,7 +227,7 @@ Build the refund parameters with `RefundDetails.builder()`, then call `refundPay
 ```java
 RefundDetails details = RefundDetails.builder()
         .reference("MP250908.1537.A22242")   // original Ecocash transaction reference
-        .phone("263778548266")               // customer MSISDN
+        .phone("26377000000")               // customer MSISDN
         .amount(20.05)
         .clientName("Acme Grocery Store")
         .reason("Defective product — complaint #1234")
